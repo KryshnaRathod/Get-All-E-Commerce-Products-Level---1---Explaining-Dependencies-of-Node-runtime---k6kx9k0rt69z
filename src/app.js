@@ -12,7 +12,9 @@ app.use(express.json());
 // Endpoint - /api/v1/products
 app.get('/products', (req, res) => {
   if (products.length === 0) {
-    return res.status(404).json({ message: 'Product not found' });
+    return res.status(404).json({
+      message: 'Product not found'
+    });
   }
 
   res.status(200).json({
