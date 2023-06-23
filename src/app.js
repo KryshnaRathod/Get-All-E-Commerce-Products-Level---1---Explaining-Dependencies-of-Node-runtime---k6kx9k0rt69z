@@ -17,13 +17,6 @@ app.get('/products', (req, res) => {
     });
   }
 
-  res.status(200).json({
-    status: 'success',
-    message: 'Product fetched successfully',
-    data: {
-      products: products
-    }
-  });
+  res.status(200).json(products);
 });
-
 module.exports = app;
